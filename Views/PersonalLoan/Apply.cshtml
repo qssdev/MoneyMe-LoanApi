@@ -1,0 +1,69 @@
+﻿@model LoanApplication.Views.ViewModels.ApplicationQuoteViewModel
+
+@{
+    ViewData["Title"] = "Apply";
+}
+
+<h2 class="text-center">Your Quote</h2>
+<hr />
+<div class="row">
+    <div class="col-md">
+        <form asp-action="ApplyLoan">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h4>Your Information</h4>
+            <div id="customer-info" class="mt-5">
+                <div class="row mt-2">
+                    <label asp-for="Name" class="control-label col"></label>
+                    <input asp-for="Name" class="form-control col" readonly />
+                </div>
+                <div class="row mt-2">
+                    <label asp-for="Mobile" class="control-label col"></label>
+                    <input asp-for="Mobile" class="form-control col" readonly />
+                </div>
+                <div class="row mt-2">
+                    <label asp-for="Email" class="control-label col"></label>
+                    <input asp-for="Email" class="form-control col" readonly />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div>
+                    <input type="hidden" asp-for="CustomerAge" />
+                    <span asp-validation-for="CustomerAge" class="text-danger"></span>
+                </div>
+            </div>
+            <div id="finance-detail mt-5">
+                <h4>Finance details</h4>
+                <div class="row mt-2">
+                    <label asp-for="FinanceAmount" class="control-label col"></label>
+                    <input asp-for="FinanceAmount" class="form-control col text-end" readonly />
+                    <span asp-validation-for="FinanceAmount" class="text-danger"></span>
+                </div>
+                <div class="row mt-2">
+                    <label asp-for="Repayment" class="control-label col"></label>
+                    <input asp-for="Repayment" class="form-control col text-end" readonly />
+                    <span asp-validation-for="Repayment" class="text-danger"></span>
+                </div>
+                <div class="row mt-2">
+                    <label asp-for="Term" class="control-label col"></label>
+                    <input asp-for="Term" class="form-control col text-end" readonly />
+                    <span asp-validation-for="Term" class="text-danger"></span>
+                </div>
+            </div>
+            <input type="hidden" asp-for="Product"/>
+            <input type="hidden" asp-for="CustomerAge" />
+            <input type="hidden" asp-for="Term" />
+            <input type="hidden" asp-for="EstablishmentFee" />
+            <input type="hidden" asp-for="Firstname" />
+            <input type="hidden" asp-for="Lastname" />
+            <input type="hidden" asp-for="Title" />
+            <input type="hidden" asp-for="DateOfBirth" />
+            <input type="hidden" asp-for="Id" />
+
+           
+            <div class="form-group text-center mt-5 pt-5">
+                <input type="submit" value="Appy" class="btn btn-primary text-center w-50" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
