@@ -17,6 +17,6 @@ namespace LoanApplication.Models
         public decimal EstablishmentFee { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
-
+        public int ProductId { get; set; }
     }
 }

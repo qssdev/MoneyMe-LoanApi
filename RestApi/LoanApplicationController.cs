@@ -2,7 +2,7 @@
 using LoanApplication.Data;
 using LoanApplication.DTO;
 using LoanApplication.Models;
-using LoanApplication.Views.ViewModels;
+using LoanApplication.Views.PersonalLoan.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LoanApplication.RestApi
@@ -132,6 +132,7 @@ namespace LoanApplication.RestApi
                 newApp.CustomerId = appDetail.CustomerId;
                 newApp.CreatedDate = DateTime.Now;
                 newApp.UpdatedDate = DateTime.Now;
+                newApp.ProductId = appDetail.ProductId;
 
                 this.DbContext.Applications.Add(newApp);
                 await this.DbContext.SaveChangesAsync();

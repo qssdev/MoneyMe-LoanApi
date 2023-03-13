@@ -1,4 +1,4 @@
-﻿namespace LoanApplication.Views.ViewModels
+﻿namespace LoanApplication.Views.PersonalLoan.ViewModels
 {
     public class ApplicationViewModel
     {

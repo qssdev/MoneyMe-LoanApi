@@ -10,6 +10,6 @@ public class CreateApplicationMessage
     public decimal EstablishmentFee { get; set; }
     public DateTime CreatedDate { get; set; }
     public DateTime UpdatedDate { get; set; }
-    
+    public int ProductId { get; set; }
     public Customer Customer { get; set; }
 }

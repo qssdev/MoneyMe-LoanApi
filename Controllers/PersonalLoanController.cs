@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using LoanApplication.Models;
 using System.Text;
 using LoanApplication.DTO;
-using LoanApplication.Views.ViewModels;
+using LoanApplication.Views.PersonalLoan.ViewModels;
 
 namespace LoanApplication.Controllers
 {
@@ -187,6 +187,7 @@ namespace LoanApplication.Controllers
                 newApp.Term = application.Term;
                 newApp.CreatedDate = DateTime.Now;
                 newApp.UpdatedDate = DateTime.Now;
+                newApp.ProductId = application.Product;
 
                 httpClient.BaseAddress = new Uri(baseUrl);
                 HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "LoanApplication/create-application");
